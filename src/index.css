@@ -1,3 +1,12 @@
+:root {
+  --col-white: #fff;
+  --col-black: #000;
+
+  --sp-s: 10px;
+  --sp-m: 15px;
+  --sp-l: 20px;
+  --sp-xl: 30px;
+}
 *,
 ::after,
 ::before {
@@ -5,9 +14,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --sp-s: 10px;
-  --sp-m: 15px;
-  --sp-l: 20px;
-  --sp-xl: 30px;
+body {
+  background-image: url("./static/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
 }
