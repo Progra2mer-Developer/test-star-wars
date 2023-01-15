@@ -1,5 +1,5 @@
 import React from "react";
-import PeopleItem from "../PeopleItem/PeopleItem";
+import PeopleItem from "@components/PeoplePage/PeopleItem/PeopleItem";
 
 import s from "./PeoleList.module.css";
 

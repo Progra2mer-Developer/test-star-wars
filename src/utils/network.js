@@ -1,4 +1,4 @@
-import { SWAPI_PEOPLE, SWAPI_ROOT } from "../constants";
+import { SWAPI_PEOPLE, SWAPI_ROOT } from "../constants/constants";
 
 export const getApiResource = async (url) => {
   try {

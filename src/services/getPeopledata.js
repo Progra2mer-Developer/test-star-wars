@@ -5,7 +5,7 @@ import {
   SWAPI_PEOPLE,
   SWAPI_ROOT,
   URL_IMG_PERSON,
-} from "../constants";
+} from "../constants/constants";
 
 const checkProtocol = (url) => {
   if (url.indexOf(HTTPS) !== -1) {

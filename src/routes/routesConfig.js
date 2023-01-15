@@ -5,14 +5,14 @@ import {
   NOT_FOUND_PAGE_ROUTE,
   PEOPLE_PAGE_ROUTE,
   SEARCH_PAGE_ROUTE,
-} from "./constants";
+} from "../constants/constants";
 
-import HomePage from "./pages/HomePage/HomePage";
-import PeoplePage from "./pages/PeoplePage/PeoplePage";
-import SearchPage from "./pages/SearchPage/SearchPage";
-import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-import FailPage from "./pages/FailPage/FailPage";
-import FavouritePage from "./pages/FavouritePage/FavouritePage";
+import HomePage from "../pages/HomePage/HomePage";
+import PeoplePage from "../pages/PeoplePage/PeoplePage";
+import SearchPage from "../pages/SearchPage/SearchPage";
+import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import FailPage from "../pages/FailPage/FailPage";
+import FavouritePage from "../pages/FavouritePage/FavouritePage";
 
 export const navRoutes = [
   { name: "Home", path: HOME_PAGE_ROUTE, element: <HomePage /> },

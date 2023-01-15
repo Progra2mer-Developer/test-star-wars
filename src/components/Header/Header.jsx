@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { publicRoutes } from "../../routesConfig";
-import Navbar from "../Navbar/Navbar";
-import Logo from "../Logo/Logo";
+import { publicRoutes } from "@routes/routesConfig";
+
+import Navbar from "@components/Navbar/Navbar";
+import Logo from "@components/Logo/Logo";
 
 import s from "./Header.module.css";
 

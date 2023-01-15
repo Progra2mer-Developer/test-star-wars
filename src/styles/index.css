@@ -21,7 +21,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url("./static/bg.jpg");
+  background-image: url("../static/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;

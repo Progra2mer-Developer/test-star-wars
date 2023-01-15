@@ -24,8 +24,4 @@ a {
   text-align: center;
   text-decoration: none;
 }
-@media (min-width: 1320px) {
-  .item {
-    width: 17%;
-  }
-}
+
