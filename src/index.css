@@ -1,11 +1,17 @@
 :root {
   --col-white: #fff;
   --col-black: #000;
+  --col-yellow: #ffff00;
 
   --sp-s: 10px;
   --sp-m: 15px;
   --sp-l: 20px;
   --sp-xl: 30px;
+
+  --font-z-header: 26px;
+  --font-f-main: sans-serif;
+
+  --b-rad-s: 3px;
 }
 *,
 ::after,
@@ -19,4 +25,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+
+  font-family: var(--font-f-main);
 }

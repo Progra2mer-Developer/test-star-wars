@@ -1,0 +1,16 @@
+.error {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  line-height: 1.7;
+  color: var(--col-yellow);
+  text-align: center;
+  font-size: var(--font-z-header);
+
+  
+  text-shadow: 0 0 2px var(--col-white);
+
+  -webkit-text-stroke-color: var(--col-yellow);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-fill-color: transparent;
+}
