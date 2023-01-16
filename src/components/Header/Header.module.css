@@ -1,3 +1,16 @@
 .header {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--container);
+  margin: 0 auto;
+
+  font-weight: var(--font-bold);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.link {
+  color: var(--col-white);
 }

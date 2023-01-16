@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "@components/Header/Header";
-import { SWAPI_PEOPLE, SWAPI_ROOT } from "@constants/constants";
 import { navRoutes, publicRoutes } from "@routes/routesConfig";
-import { getApiResource } from "@utils/network";
 
 import s from "./App.module.css";
+import { hidenRoutes } from "../routes/routesConfig";
 
 const App = () => {
   return (
     <div className={s.app}>
-      <Header />
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      <div className={s.wrapper}>
+        <Header />
+
         <Routes>
           {navRoutes.map((route) => {
             return (
@@ -23,6 +23,15 @@ const App = () => {
             );
           })}
           {publicRoutes.map((route) => {
+            return (
+              <Route
+                path={route.path}
+                element={route.element}
+                key={route.name}
+              />
+            );
+          })}
+          {hidenRoutes.map((route) => {
             return (
               <Route
                 path={route.path}

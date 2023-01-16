@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 import { WithErrorApi } from "@hoc-helpers/WithErrorApi";
 
 import PeopleList from "@components/PeoplePage/PeoleList/PeoleList";
-import { HTTPS, SWAPI_PEOPLE, SWAPI_ROOT } from "@constants/constants";
-import { getPeopleId, getPeopleImage } from "@services/getPeopleData";
+import ErrorMessage from "@components/ErrorMessage/ErrorMessage";
+
 import { getApiResource } from "@utils/network";
+import { getPeopleId, getPeopleImage } from "@services/getPeopleData";
+
+import { HTTPS, SWAPI_PEOPLE, SWAPI_ROOT } from "@constants/constants";
 
 import s from "./PeoplePage.module.css";
-import ErrorMessage from "@components/ErrorMessage/ErrorMessage";
 
 const PeoplePage = () => {
   const [people, setPeople] = useState(null);

@@ -1,0 +1,22 @@
+.link {
+  color: var(--col-white);
+  padding: var(--sp-s) var(--sp-m);
+  margin: 0 var(--sp-s);
+  min-width: 70px;
+
+  border: 1px solid transparent;
+  transition: var(--transition);
+  text-shadow: var(--text-shadow-yellow);
+  border-radius: var(--b-rad-s);
+}
+.link:hover {
+  color: var(--col-violet);
+  border: 1px solid var(--col-violet);
+  transition: var(--transition);
+  text-shadow: none;
+}
+.active {
+  color: var(--col-violet);
+  border: 1px solid var(--col-violet);
+  text-shadow: none;
+}

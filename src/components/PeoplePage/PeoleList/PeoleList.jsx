@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import PeopleItem from "@components/PeoplePage/PeopleItem/PeopleItem";
 
 import s from "./PeoleList.module.css";
@@ -11,6 +12,9 @@ const PeoleList = ({ people }) => {
       })}
     </div>
   );
+};
+PeoleList.propTypes = {
+  people: PropTypes.array,
 };
 
 export default PeoleList;

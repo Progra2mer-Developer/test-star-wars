@@ -10,12 +10,15 @@ import s from "./Header.module.css";
 const Header = () => {
   return (
     <div className={s.header}>
-      <Logo />
-      <Navbar />
-      <div className={s.navbar}>
+      <div className={s.nav}>
+        <Logo />
+        <Navbar />
+      </div>
+
+      <div className={s.favourite}>
         {publicRoutes.map((route) => {
           return (
-            <NavLink to={route.path} key={route.name}>
+            <NavLink to={route.path} key={route.name} className={s.link}>
               {route.name}
             </NavLink>
           );
