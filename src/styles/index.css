@@ -12,12 +12,16 @@
 
   --font-bold: 700;
   --font-f-main: sans-serif;
+
   --font-z-header: 26px;
+  --font-z-main: 16px;
+  --font-z-subheader: 18px;
 
   --sp-xs: 10px;
   --sp-s: 15px;
   --sp-m: 20px;
   --sp-l: 30px;
+  --sp-xl: 40px;
   --theme-default-bg-image: url("@static/bg.jpg");
   --theme-default-header: #cccc46;
 

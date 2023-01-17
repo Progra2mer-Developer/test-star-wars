@@ -18,8 +18,8 @@ a {
   text-decoration: none;
   padding: var(--sp-s);
 }
-@media (min-width: 1320px) {
+/* @media (min-width: 1320px) {
   .peopleItem {
-    width: 17%;
+    width: 20%;
   }
-}
+} */

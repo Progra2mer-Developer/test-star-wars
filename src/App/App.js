@@ -18,7 +18,7 @@ const App = () => {
               <Route
                 path={route.path}
                 element={route.element}
-                key={route.name}
+                key={route.key}
               />
             );
           })}
@@ -27,7 +27,7 @@ const App = () => {
               <Route
                 path={route.path}
                 element={route.element}
-                key={route.name}
+                key={route.key}
               />
             );
           })}
@@ -36,7 +36,7 @@ const App = () => {
               <Route
                 path={route.path}
                 element={route.element}
-                key={route.name}
+                key={route.key}
               />
             );
           })}

@@ -11,7 +11,7 @@ const Navbar = () => {
         return (
           <NavLink
             to={route.path}
-            key={route.name}
+            key={route.key}
             className={(props) => `${s.link} ${props.isActive ? s.active : ""}`}
           >
             {route.name}

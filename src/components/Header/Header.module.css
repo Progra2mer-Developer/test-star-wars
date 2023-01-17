@@ -1,6 +1,8 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   max-width: var(--container);
   margin: 0 auto;
 
