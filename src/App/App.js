@@ -5,6 +5,7 @@ import { navRoutes, publicRoutes } from "@routes/routesConfig";
 
 import s from "./App.module.css";
 import { hidenRoutes } from "../routes/routesConfig";
+import PeoplePage from "../pages/PeoplePage/PeoplePage";
 
 const App = () => {
   return (

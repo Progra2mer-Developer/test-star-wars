@@ -5,7 +5,14 @@ import {
   SWAPI_PEOPLE,
   SWAPI_ROOT,
   URL_IMG_PERSON,
+  SWAPI_PARAM_PAGE,
 } from "../constants/constants";
+
+export const getPeoplePageId = (url) => {
+  const pos = url.lastIndexOf(SWAPI_PARAM_PAGE);
+  const id = url.slice(pos + SWAPI_PARAM_PAGE.length, url.length);
+  return Number(id);
+};
 
 const checkProtocol = (url) => {
   if (url.indexOf(HTTPS) !== -1) {

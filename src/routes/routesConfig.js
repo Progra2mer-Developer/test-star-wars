@@ -28,7 +28,6 @@ export const navRoutes = [
     name: "People",
     path: PEOPLE_PAGE_ROUTE,
     element: <PeoplePage />,
-
     key: "PeoplePage",
   },
   {
