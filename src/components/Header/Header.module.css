@@ -6,7 +6,7 @@
   max-width: var(--container);
   margin: 0 auto;
 
-  font-weight: var(--font-bold);
+  font-weight: var(--font-w-bold);
 }
 .nav {
   display: flex;

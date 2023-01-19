@@ -47,7 +47,6 @@ const PeoplePage = () => {
 
       setPage(getPeoplePageId(url));
       const pageNum = location.pathname.replace("/people/page=", "");
-      console.log(pageNum);
       setPage(Number(pageNum));
       setErrorApi(false);
     } else {

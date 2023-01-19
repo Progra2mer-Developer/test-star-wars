@@ -2,25 +2,24 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
+import UiButton from "@ui/UiButton/UiButton";
+
 import s from "./PeopleNav.module.css";
-import { Link } from "react-router-dom";
-import { SWAPI_PARAM_PAGE, SWAPI_PEOPLE } from "../../../constants/constants";
 
 const PeopleNav = ({ getResource, prevPage, nextPage, page }) => {
   return (
     <div className={s.peopleNav}>
-      <button
+      <UiButton
+        text="Next"
+        disabled={!prevPage}
         onClick={() => getResource(prevPage)}
-        className={`${s.btn} ${s.next}`}
-      >
-        Next
-      </button>
-      <button
+      />
+      <UiButton
+        text="Prev"
+        disabled={!nextPage}
         onClick={() => getResource(nextPage)}
-        className={`${s.btn} ${s.prev}`}
-      >
-        Prev
-      </button>
+      />
+    
     </div>
   );
 };

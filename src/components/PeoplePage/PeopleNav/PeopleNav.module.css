@@ -1,7 +1,4 @@
 .peopleNav {
-  text-align: center;
-}
-.btn {
-  padding: var(--sp-xs) var(--sp-m);
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
