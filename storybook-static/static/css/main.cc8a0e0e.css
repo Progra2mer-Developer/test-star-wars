@@ -1,0 +1,60 @@
+:root {
+  --b-rad-s: 3px;
+
+  --col-black: #000;
+  --col-gray: #9c9c9c;
+  --col-white: #fff;
+
+  --font-family-main: sans-serif;
+  --font-w-bold: 600;
+  --font-z-s: 14px;
+
+  --transition: 0.4s linear;
+}
+
+.UiButton_btn__EP2y\+ {
+  min-width: 100px;
+  padding: 10px;
+  margin: 10px;
+
+  border-radius: var(--b-rad-s);
+
+  font-size: var(--font-z-s);
+  font-family: var(--font-family-main);
+  font-weight: var(--font-w-bold);
+
+  background: none;
+  outline: none;
+
+  -webkit-transform: var(--transition);
+
+          transform: var(--transition);
+
+  cursor: pointer;
+}
+.UiButton_btn__EP2y\+:disabled,
+.UiButton_btn__EP2y\+:disabled:hover {
+  color: var(--col-gray);
+  border-color: var(--col-gray);
+  background-color: transparent;
+  cursor: auto;
+}
+.UiButton_dark__O5emY {
+  border: 1px solid var(--col-white);
+  color: var(--col-white);
+}
+.UiButton_dark__O5emY:hover {
+  color: var(--col-black);
+  background-color: var(--col-white);
+}
+.UiButton_light__3zKth {
+  border: 1px solid var(--col-black);
+  color: var(--col-black);
+}
+.UiButton_light__3zKth:hover {
+  color: var(--col-white);
+  background-color: var(--col-black);
+}
+
+
+/*# sourceMappingURL=main.cc8a0e0e.css.map*/
