@@ -1,4 +1,5 @@
 :root {
+  --b-rad-m: 5px;
   --b-rad-s: 3px;
 
   --container: 1200px;
@@ -17,6 +18,8 @@
   --font-z-main: 16px;
   --font-z-subheader: 18px;
 
+  --sp-xs: 5px;
+  --sp-list: 7px;
   --sp-s: 10px;
   --sp-m: 20px;
   --sp-l: 30px;

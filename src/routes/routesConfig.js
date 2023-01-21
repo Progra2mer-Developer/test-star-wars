@@ -4,7 +4,7 @@ import {
   HOME_PAGE_ROUTE,
   NOT_FOUND_PAGE_ROUTE,
   NOT_FOUND_ROUTE,
-  PEOPLE_ITEM_PAGE_ROUTE,
+  PERSON_PAGE_ROUTE,
   PEOPLE_PAGE_ROUTE,
   SEARCH_PAGE_ROUTE,
 } from "../constants/constants";
@@ -15,8 +15,7 @@ import SearchPage from "../pages/SearchPage/SearchPage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import FailPage from "../pages/FailPage/FailPage";
 import FavouritePage from "../pages/FavouritePage/FavouritePage";
-import PeopleItemPage from "../pages/PeopleItemPage/PeopleItemPage";
-
+import PersonPage from "../pages/PersonPage/PersonPage";
 export const navRoutes = [
   {
     name: "Home",
@@ -61,9 +60,9 @@ export const publicRoutes = [
 export const hidenRoutes = [
   {
     name: "PeopleItem",
-    path: PEOPLE_ITEM_PAGE_ROUTE,
-    element: <PeopleItemPage />,
-    key: "PeopleItemPage",
+    path: PERSON_PAGE_ROUTE,
+    element: <PersonPage />,
+    key: "PersonPage",
   },
   {
     name: "Not Found",

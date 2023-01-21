@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import s from "./PeopleItem.module.css";
 import { Link } from "react-router-dom";
-import { PEOPLE_PAGE_ROUTE } from "../../../constants/constants";
+
+import s from "./PeopleItem.module.css";
 
 const PeopleItem = ({ img, name, id }) => {
   return (

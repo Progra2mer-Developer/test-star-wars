@@ -1,0 +1,22 @@
+.personPage {
+  --col-name: var(--col-violet);
+}
+.person {
+  border-left: 5px solid var(--col-name);
+  border-radius: var(--b-rad-s);
+  margin-top: 45px;
+}
+.name {
+  display: inline-block;
+  background-color: var(--col-name);
+  color: var(--col-white);
+  padding: var(--sp-s);
+  font-size: var(--font-z-subheader);
+  font-weight: var(--font-w-bold);
+  border-radius: var(--b-rad-s) var(--b-rad-s) var(--b-rad-s) 0;
+}
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--sp-m);
+}
