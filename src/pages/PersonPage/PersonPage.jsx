@@ -10,6 +10,7 @@ import { getPeopleImage } from "@services/getPeopleData";
 import { getApiResource } from "@utils/network";
 
 import s from "./PersonPage.module.css";
+import PersonLinkBack from "../../components/PersonPage/PersonLinkBack/PersonLinkBack";
 
 const PersonPage = () => {
   const [errorApi, setErrorApi] = useState(null);
@@ -21,7 +22,6 @@ const PersonPage = () => {
   const [personFilms, setPersonFilms] = useState([]);
 
   const location = useLocation();
-  const navigate = useNavigate();
 
   const id = location.pathname.replace(`${PEOPLE_PAGE_ROUTE}/`, ``);
 
@@ -34,7 +34,7 @@ const PersonPage = () => {
       res.films?.map((filmLink) => {
         (async () => {
           const film = await getApiResource(filmLink);
-          console.log(film.title);
+          // console.log(film.title);
           setPersonFilms((prevState) => {
             if (prevState) {
               return [...prevState, film.title];
@@ -69,7 +69,7 @@ const PersonPage = () => {
         <ErrorMessage />
       ) : (
         <>
-          <button onClick={() => navigate(-1)}>Back</button>
+          <PersonLinkBack />
           <>
             {person ? (
               <div className={s.person}>

@@ -1,0 +1,23 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  display: inline-flex;
+  align-items: center;
+
+  color: var(--col-yellow);
+  font-weight: var(--font-w-bold);
+
+  cursor: pointer;
+  transition: var(--transition);
+}
+.img {
+  width: 30px;
+  height: 30px;
+  margin-right: var(--sp-s);
+  object-fit: cover;
+  object-position: center center;
+  color: var(--col-yellow);
+}
+

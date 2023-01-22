@@ -1,5 +1,6 @@
 .personPage {
   --col-name: var(--col-violet);
+  margin-top: 45px;
 }
 .person {
   border-left: 5px solid var(--col-name);
