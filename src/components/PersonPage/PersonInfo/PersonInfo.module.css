@@ -1,16 +1,13 @@
 .personInfo {
-  display: flex;
   width: 300px;
+  /* max-width: 300px; */
   padding: var(--sp-m);
   margin-left: var(--sp-l);
   background-color: #00000065;
   border-radius: var(--b-rad-m);
   color: var(--col-white);
 }
-.list {
-  margin: 0;
-  padding: 0;
-}
+
 .item {
   padding: var(--sp-xs);
   margin-bottom: var(--sp-list);
@@ -19,10 +16,12 @@
   text-decoration: underline;
   text-shadow: var(--text-shadow-blue);
 }
+.data {
+  margin-left: var(--sp-xs);
+}
 @media screen and (max-width: 700px) {
   .personInfo {
     width: 100%;
     margin: var(--sp-m) 0 0 0;
-    padding: 0;
   }
 }

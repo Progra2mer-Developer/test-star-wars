@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import ErrorMessage from "@components/ErrorMessage/ErrorMessage";
 import PersonPhoto from "@components/PersonPage/PersonPhoto/PersonPhoto";
 import PersonInfo from "@components/PersonPage/PersonInfo/PersonInfo";
+import PersonLinkBack from "@components/PersonPage/PersonLinkBack/PersonLinkBack";
 
 import { PEOPLE_PAGE_ROUTE, API_PERSON } from "@constants/constants";
 import { getPeopleImage } from "@services/getPeopleData";
 import { getApiResource } from "@utils/network";
 
 import s from "./PersonPage.module.css";
-import PersonLinkBack from "../../components/PersonPage/PersonLinkBack/PersonLinkBack";
+import UiLoading from "../../components/Ui/UiLoading/UiLoading";
+const PersonFilms = React.lazy(() =>
+  import("@components/PersonPage/PersonFilms/PersonFilms")
+);
 
 const PersonPage = () => {
   const [errorApi, setErrorApi] = useState(null);
@@ -31,17 +35,7 @@ const PersonPage = () => {
       const img = getPeopleImage(id);
       setPhoto(img);
       setPersonName(res.name);
-      res.films?.map((filmLink) => {
-        (async () => {
-          const film = await getApiResource(filmLink);
-          // console.log(film.title);
-          setPersonFilms((prevState) => {
-            if (prevState) {
-              return [...prevState, film.title];
-            }
-          });
-        })();
-      });
+      setPersonFilms(res.films);
       setPerson([
         { title: "Height", data: res.height },
         { title: "Mass", data: res.mass },
@@ -77,7 +71,12 @@ const PersonPage = () => {
                 <div className={s.info}>
                   <PersonPhoto photo={photo} />
 
-                  <PersonInfo person={person} personFilms={personFilms} />
+                  {person && <PersonInfo person={person} />}
+                  {personFilms && (
+                    <Suspense fallback={<UiLoading />}>
+                      <PersonFilms personFilms={personFilms} />
+                    </Suspense>
+                  )}
                 </div>
               </div>
             ) : null}

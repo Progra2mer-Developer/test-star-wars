@@ -1,0 +1,33 @@
+.personFilms {
+  margin-left: var(--sp-l);
+  padding: var(--sp-m) 0;
+}
+.filmsList {
+  margin: 0;
+  padding: 0;
+}
+.film {
+  display: flex;
+  align-items: center;
+  color: var(--col-white);
+  margin-bottom: var(--sp-list);
+}
+.episode {
+  padding: var(--sp-xs);
+  border-radius: var(--b-rad-s);
+  background-color: var(--col-red);
+}
+.colon {
+  width: 20px;
+  font-weight: var(--font-w-bold);
+  text-align: center;
+}
+.title {
+  text-shadow: var(--text-shadow-yellow);
+}
+@media screen and (max-width: 1020px) {
+  .personFilms {
+    width: 100%;
+    margin: 0;
+  }
+}

@@ -1,0 +1,24 @@
+.uiLoading {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid;
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
