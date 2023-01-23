@@ -10,6 +10,7 @@ module.exports = function override(config, env) {
     "@routes": "src/routes",
     "@services": "src/services",
     "@static": "src/static",
+    "@store": "src/store",
     "@styles": "src/styles",
     "@ui": "src/components/Ui",
     "@utils": "src/utils",

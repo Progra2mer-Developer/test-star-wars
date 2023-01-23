@@ -5,13 +5,14 @@ import ErrorMessage from "@components/ErrorMessage/ErrorMessage";
 import PersonPhoto from "@components/PersonPage/PersonPhoto/PersonPhoto";
 import PersonInfo from "@components/PersonPage/PersonInfo/PersonInfo";
 import PersonLinkBack from "@components/PersonPage/PersonLinkBack/PersonLinkBack";
+import UiLoading from "@components/Ui/UiLoading/UiLoading";
 
 import { PEOPLE_PAGE_ROUTE, API_PERSON } from "@constants/constants";
 import { getPeopleImage } from "@services/getPeopleData";
 import { getApiResource } from "@utils/network";
 
 import s from "./PersonPage.module.css";
-import UiLoading from "../../components/Ui/UiLoading/UiLoading";
+
 const PersonFilms = React.lazy(() =>
   import("@components/PersonPage/PersonFilms/PersonFilms")
 );
