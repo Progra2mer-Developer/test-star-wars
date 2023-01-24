@@ -5,11 +5,19 @@ import { useSelector } from "react-redux";
 import s from "./FavouritePage.module.css";
 
 const FavouritePage = () => {
-  const storeDate = useSelector((state) => state.favouriteReducer);
-  console.log(storeDate);
+  // const storeDate = useSelector((state) => state.favouriteReducer);
+  // console.log(storeDate);
   return (
     <div className={s.favouritePage}>
-      <div>FavouritePage</div>
+      {/* {storeDate.map((storeItme) => {
+        return (
+          <div>
+            <img src={storeItme.img} alt="img" />
+            <div>{storeItme.name}</div>
+          </div>
+        );
+      })} */}
+      12
     </div>
   );
 };

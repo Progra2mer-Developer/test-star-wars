@@ -1,4 +1,7 @@
 .personPhoto {
+  position: relative;
+  top: 0;
+  left: 0;
   width: 250px;
   height: 350px;
 }
@@ -8,4 +11,16 @@
   border-radius: var(--b-rad-m);
   object-fit: cover;
   object-position: center center;
+}
+.favourite {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  z-index: 1000;
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  object-position: center center;
+  filter: drop-shadow(0 0 2px #000);
+  cursor: pointer;
 }

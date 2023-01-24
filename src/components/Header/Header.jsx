@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { publicRoutes } from "@routes/routesConfig";
 
+import Favourite from "../Favourite/Favourite";
 import Navbar from "@components/Navbar/Navbar";
 import Logo from "@components/Logo/Logo";
 
@@ -19,7 +20,7 @@ const Header = () => {
         {publicRoutes.map((route) => {
           return (
             <NavLink to={route.path} key={route.name} className={s.link}>
-              {route.name}
+              <Favourite />
             </NavLink>
           );
         })}

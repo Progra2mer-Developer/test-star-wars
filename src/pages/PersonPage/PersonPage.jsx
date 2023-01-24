@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Suspense } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import ErrorMessage from "@components/ErrorMessage/ErrorMessage";
 import PersonPhoto from "@components/PersonPage/PersonPhoto/PersonPhoto";
@@ -12,15 +12,21 @@ import { getPeopleImage } from "@services/getPeopleData";
 import { getApiResource } from "@utils/network";
 
 import s from "./PersonPage.module.css";
+import { useSelector } from "react-redux";
 
 const PersonFilms = React.lazy(() =>
   import("@components/PersonPage/PersonFilms/PersonFilms")
 );
 
 const PersonPage = () => {
+  const storeDate = useSelector((state) => state.favouriteReducer);
+  console.log(storeDate);
+
   const [errorApi, setErrorApi] = useState(null);
   const [person, setPerson] = useState(null);
   const [personName, setPersonName] = useState(null);
+  const [personId, setPersonID] = useState(null);
+  const [personFavourite, setPersonFavourite] = useState(null);
 
   const [photo, setPhoto] = useState(null);
 
@@ -28,14 +34,17 @@ const PersonPage = () => {
 
   const location = useLocation();
 
-  const id = location.pathname.replace(`${PEOPLE_PAGE_ROUTE}/`, ``);
+  const getResource = async (url) => {
+    const id = location.pathname.replace(`${PEOPLE_PAGE_ROUTE}/`, ``);
 
-  const getResource = async (url, id) => {
     const res = await getApiResource(`${url}/${id}`);
+    storeDate[id] ? setPersonFavourite(true) : setPersonFavourite(false);
     if (res) {
       const img = getPeopleImage(id);
       setPhoto(img);
       setPersonName(res.name);
+      setPersonID(id);
+
       setPersonFilms(res.films);
       setPerson([
         { title: "Height", data: res.height },
@@ -55,7 +64,7 @@ const PersonPage = () => {
 
   useEffect(() => {
     (async () => {
-      getResource(API_PERSON, id);
+      getResource(API_PERSON);
     })();
   }, []);
   return (
@@ -70,7 +79,13 @@ const PersonPage = () => {
               <div className={s.person}>
                 {personName && <span className={s.name}>{personName}</span>}
                 <div className={s.info}>
-                  <PersonPhoto photo={photo} />
+                  <PersonPhoto
+                    photo={photo}
+                    personName={personName}
+                    personId={personId}
+                    setPersonFavourite={setPersonFavourite}
+                    personFavourite={personFavourite}
+                  />
 
                   {person && <PersonInfo person={person} />}
                   {personFilms && (
