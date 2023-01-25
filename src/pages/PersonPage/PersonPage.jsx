@@ -20,7 +20,6 @@ const PersonFilms = React.lazy(() =>
 
 const PersonPage = () => {
   const storeDate = useSelector((state) => state.favouriteReducer);
-  console.log(storeDate);
 
   const [errorApi, setErrorApi] = useState(null);
   const [person, setPerson] = useState(null);

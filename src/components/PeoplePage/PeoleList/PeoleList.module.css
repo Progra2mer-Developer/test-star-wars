@@ -1,27 +1,13 @@
 .peopelList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   margin: 0;
   padding: 0;
 }
-.item {
-  width: 190px;
-  margin: var(--sp-m);
-  border-radius: var(--b-rad-s);
-  overflow: hidden;
-  background-color: var(--col-white);
-}
-a {
-  text-decoration: none;
-}
-.photo {
-  width: 100%;
-  height: 90%;
-}
-.text {
-  color: var(--col-black);
-  text-align: center;
-  text-decoration: none;
-}
 
+@media (max-width: 1400px) {
+  .peopelList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,4 +1,5 @@
 .peopleItem {
+  display: inline-block;
   width: 190px;
   margin: var(--sp-m);
   border-radius: var(--b-rad-s);
@@ -18,8 +19,23 @@ a {
   text-decoration: none;
   padding: var(--sp-s);
 }
-/* @media (min-width: 1320px) {
+@media (max-width: 1400px) {
   .peopleItem {
     width: 20%;
   }
-} */
+}
+@media (max-width: 990px) {
+  .peopleItem {
+    width: 27%;
+  }
+}
+@media (max-width: 760px) {
+  .peopleItem {
+    width: 40%;
+  }
+}
+@media (max-width: 480px) {
+  .peopleItem {
+    width: 80%;
+  }
+}
