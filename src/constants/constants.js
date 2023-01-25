@@ -25,3 +25,6 @@ const GUIDE_PEOPLE = "characters";
 export const GUIDE_IMG_EXTENSION = ".jpg";
 
 export const URL_IMG_PERSON = GUIDE_ROOT_IMG + GUIDE_PEOPLE;
+
+// loacalstorage
+export const LOCALSTORAGE_KEY = "people";

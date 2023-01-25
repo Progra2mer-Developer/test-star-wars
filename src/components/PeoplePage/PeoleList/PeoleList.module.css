@@ -3,11 +3,4 @@
   padding: 0;
 }
 
-@media (max-width: 1400px) {
-  .peopelList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
+
