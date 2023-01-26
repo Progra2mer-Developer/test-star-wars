@@ -1,5 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+ 
+
 
 import Header from "@components/Header/Header";
 
@@ -8,6 +10,7 @@ import { navRoutes, publicRoutes } from "@routes/routesConfig";
 import { hidenRoutes } from "@routes/routesConfig";
 
 import s from "./App.module.css";
+
 const App = () => {
   return (
     <div className={s.app}>

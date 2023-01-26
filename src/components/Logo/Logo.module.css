@@ -1,4 +1,7 @@
 img {
-    width: 56px;
-    height: 56px;
+  width: 60px;
+  height: 60px;
+  margin-right: var(--sp-l);
+  object-fit: cover;
+  object-position: center center;
 }

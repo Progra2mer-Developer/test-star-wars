@@ -28,3 +28,7 @@ export const URL_IMG_PERSON = GUIDE_ROOT_IMG + GUIDE_PEOPLE;
 
 // loacalstorage
 export const LOCALSTORAGE_KEY = "people";
+//theme
+export const THEME_LIGHT = "light";
+export const THEME_DARK = "dark";
+export const THEME_NEITRAL = "neitral";
