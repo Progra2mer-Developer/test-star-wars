@@ -15,9 +15,9 @@
   --font-w-bold: 700;
   --font-f-main: sans-serif;
 
-  --font-z-header: 26px;
   --font-z-main: 16px;
   --font-z-subheader: 18px;
+  --font-z-header: 26px;
 
   --sp-xs: 5px;
   --sp-list: 7px;
@@ -26,8 +26,30 @@
   --sp-l: 30px;
   --sp-xl: 40px;
 
-  --theme-default-bg-image: url("@static/bg.jpg");
-  --theme-default-header: #cccc46;
+  /*THEMES*/
+  --theme-dark-header: #ca6c6f;
+  --theme-light-header: #dfe2df;
+  --theme-neitral-header: #cccc46;
+  --theme-default-header: var(--theme-neitral-header);
+
+  --theme-light-bg-image: linear-gradient(
+    to right bottom,
+    #051937,
+    #162454,
+    #312d70,
+    #533389,
+    #7a359f
+  );
+  --theme-dark-bg-image: linear-gradient(
+    to right bottom,
+    #000000,
+    #160b11,
+    #20141e,
+    #281b2e,
+    #2b2440
+  );
+  --theme-neitral-bg-image: url("@static/bg.jpg");
+  --theme-default-bg-image: var(--theme-neitral-bg-image);
 
   --box-shadow-black: 0 16px 24px 2px rgba(0, 0, 0, 0.5),
     0 6px 30px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
