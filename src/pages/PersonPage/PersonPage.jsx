@@ -1,6 +1,8 @@
 import React, { useEffect, useState, Suspense } from "react";
 import { useLocation } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+
 import ErrorMessage from "@components/ErrorMessage/ErrorMessage";
 import PersonPhoto from "@components/PersonPage/PersonPhoto/PersonPhoto";
 import PersonInfo from "@components/PersonPage/PersonInfo/PersonInfo";
@@ -12,7 +14,6 @@ import { getPeopleImage } from "@services/getPeopleData";
 import { getApiResource } from "@utils/network";
 
 import s from "./PersonPage.module.css";
-import { useSelector } from "react-redux";
 
 const PersonFilms = React.lazy(() =>
   import("@components/PersonPage/PersonFilms/PersonFilms")

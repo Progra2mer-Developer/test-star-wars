@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import { useTheme } from "@context/ThemeProvider";
 
@@ -25,8 +25,8 @@ const ChooseSideItem = ({ classes, theme, text, img }) => {
         changeCssVariables(theme);
       }}
     >
-      <div className={s.item__header}>{text}</div>
-      <img src={img} alt={text} className={classes} />
+      <div className={s.header}>{text}</div>
+      <img src={img} alt={text} className={s.img} />
     </div>
   );
 };
@@ -36,8 +36,7 @@ ChooseSideItem.propTypes = {
   theme: PropTypes.string,
   text: PropTypes.string,
   img: PropTypes.string,
-}
-
+};
 
 const ChooseSide = () => {
   const elements = [
@@ -45,19 +44,19 @@ const ChooseSide = () => {
       theme: THEME_LIGHT,
       text: "Light Side",
       img: imgLightSide,
-      classes: s.item__light,
+      classes: s.light,
     },
     {
       theme: THEME_DARK,
       text: "Dark Side",
       img: imgDarkSide,
-      classes: s.item__dark,
+      classes: s.dark,
     },
     {
       theme: THEME_NEITRAL,
       text: "I'm Han Solo",
       img: imgFalcon,
-      classes: s.item__neitral,
+      classes: s.neitral,
     },
   ];
   return (
@@ -73,13 +72,6 @@ const ChooseSide = () => {
       ))}
     </div>
   );
-};
-
-ChooseSide.propTypes = {
-  //   useTheme: PropTypes.func,
-  //   THEME_LIGHT: PropTypes.string,
-  //   THEME_DARK: PropTypes.string,
-  //   THEME_NEITRAL: PropTypes.string,
 };
 
 export default ChooseSide;
