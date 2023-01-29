@@ -1,25 +1,24 @@
-import React from "react";
-import { useState } from "react";
-import { getApiResource } from "@utils/network";
+import React, { useCallback, useEffect, useState } from "react";
+import { debounce } from "lodash";
 
 import ErrorMessage from "@components/ErrorMessage/ErrorMessage";
+import SearchPageInfo from "@components/SearchPage/SearchPageInfo/SearchPageInfo";
+import UiInput from "@components/Ui/UiInput/UiInput";
+
+import { getApiResource } from "@utils/network";
 
 import { getPeopleId, getPeopleImage } from "@services/getPeopleData";
-import { API_SEARCH } from "@constants/constants";
+import { API_PEOPLE, API_SEARCH } from "@constants/constants";
 
 import s from "./SearchPage.module.css";
-import SearchPageInfo from "../../components/SearchPage/SearchPageInfo/SearchPageInfo";
-import { useEffect } from "react";
-import { API_PEOPLE, API_PERSON } from "../../constants/constants";
 
 const SearchPage = () => {
   const [errorApi, setErrorApi] = useState(null);
   const [people, setPeople] = useState([]);
 
-  const [page, setPage] = useState(1);
-
   const [inputSearchValue, setInputSearchValue] = useState("");
   const getResponse = async (api, param) => {
+    console.log(param);
     const res = await getApiResource(api + param);
     if (res) {
       const peopleList = res.results.map(({ name, url }) => {
@@ -37,16 +36,19 @@ const SearchPage = () => {
       setErrorApi(true);
     }
   };
-  const handleInputChange = (e) => {
-    const value = e.target.value;
-    setInputSearchValue(value);
-    getResponse(API_SEARCH, value);
-  };
   useEffect(() => {
-    if (page) {
-      getResponse(API_PEOPLE, 1);
-    }
+    getResponse(API_PEOPLE, 1);
   }, []);
+
+  const debouncedGetResponce = useCallback(
+    debounce((value) => getResponse(API_SEARCH, value), 500),
+    []
+  );
+  const handleInputChange = (value) => {
+    setInputSearchValue(value);
+    debouncedGetResponce(value);
+  };
+
   return (
     <div className={s.searchPage}>
       {errorApi ? (
@@ -54,12 +56,13 @@ const SearchPage = () => {
       ) : (
         <>
           <h1 className={"header__text"}>Search</h1>
-          <input
-            value={inputSearchValue}
-            onChange={handleInputChange}
+          <UiInput
+            inputSearchValue={inputSearchValue}
+            handleInputChange={handleInputChange}
             placeholder="Input character's name"
-            type="text"
+            classes={s.input}
           />
+
           <SearchPageInfo people={people} />
         </>
       )}

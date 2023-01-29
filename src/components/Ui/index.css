@@ -3,11 +3,21 @@
 
   --col-black: #000;
   --col-gray: #9c9c9c;
+  --col-light-gray: #dfe2df;
   --col-white: #fff;
+  --col-blue: #6a83fb;
 
   --font-family-main: sans-serif;
   --font-w-bold: 600;
   --font-z-s: 14px;
+  --font-z-m: 16 px;
 
   --transition: 0.4s linear;
+}
+::after,
+::before {
+  box-sizing: border-box;
+}
+img {
+  display: block;
 }

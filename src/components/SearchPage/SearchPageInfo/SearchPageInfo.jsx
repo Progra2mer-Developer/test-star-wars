@@ -9,16 +9,16 @@ const SearchPageInfo = ({ people }) => {
   return (
     <div className={s.searchPageInfo}>
       {people.length ? (
-        <>
+        <div className={s.list}>
           {people.map(({ name, id, img }) => (
-            <Link to={`/people/${id}`} key={id}>
+            <Link to={`/people/${id}`} key={id} className={s.item}>
               <img src={img} alt={name} className={s.photo} />
-              <div className={s.text}>{name}</div>
+              <div className={s.name}>{name}</div>
             </Link>
           ))}
-        </>
+        </div>
       ) : (
-        <h2>No results</h2>
+        <h2 className={s.comment}>No results</h2>
       )}
     </div>
   );

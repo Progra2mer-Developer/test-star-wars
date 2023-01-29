@@ -68,6 +68,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+img {
+  display: block;
+}
 body {
   height: 100vh;
   background-image: var(--theme-default-bg-image);
